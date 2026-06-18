@@ -1,0 +1,8 @@
+I implemented a fully responsive MERN landing page and API using TypeScript and Tailwind CSS.
+
+My approach focuses on creating modular React components (Hero, Details, Outcomes, FAQ, Form) with client-side validation, loading states, and confetti animations for a premium user experience. On the backend, I built an Express API validated with Zod schemas and integrated with Mongoose. To ensure robust local evaluation, I built a fallback connector that automatically saves data to `enquiries.json` if MongoDB is offline.
+
+If given more time, I would:
+1. Implement security policies (CORS restriction, rate limiting, and helmet headers).
+2. Set up automated email receipts for parents using Nodemailer/SendGrid.
+3. Build a password-protected admin dashboard route `/admin` to view and filter registered student cohorts.
