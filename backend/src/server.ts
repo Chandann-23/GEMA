@@ -32,11 +32,12 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', time: new Date() });
 });
 
-// Start server and connect to database
-const startServer = async () => {
-  // Connect to DB (will fallback gracefully to JSON file if MongoDB is offline)
-  await connectDB();
-  
+// Connect to DB (will fallback gracefully to JSON file if MongoDB is offline)
+connectDB().catch(err => {
+  console.error('Initial DB connection failed:', err);
+});
+
+if (process.env.VERCEL !== '1') {
   app.listen(PORT, () => {
     console.log(`===================================================`);
     console.log(`🚀 Server running on http://localhost:${PORT}`);
@@ -44,8 +45,6 @@ const startServer = async () => {
     console.log(`📍 POST Enquiry: http://localhost:${PORT}/api/enquiry`);
     console.log(`===================================================`);
   });
-};
+}
 
-startServer().catch(err => {
-  console.error('Failed to start backend server:', err);
-});
+export default app;

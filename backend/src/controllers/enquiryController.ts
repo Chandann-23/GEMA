@@ -14,7 +14,9 @@ const enquirySchema = z.object({
   message: z.string().max(500, 'Message cannot exceed 500 characters').optional().transform(val => val || ''),
 });
 
-const JSON_DB_PATH = path.join(__dirname, '../../enquiries.json');
+const JSON_DB_PATH = process.env.VERCEL === '1'
+  ? path.join('/tmp', 'enquiries.json')
+  : path.join(__dirname, '../../enquiries.json');
 
 // Helper to save to a JSON file fallback
 const saveToLocalFile = (data: any) => {
