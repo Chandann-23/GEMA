@@ -2,6 +2,17 @@
 
 A complete, production-grade implementation of the GEMA Education Technology and Pvt Ltd assignment. This project features a responsive, Kidrove-style landing page built with React, TypeScript, and Tailwind CSS, backed by a robust Express.js API with Zod validation and a Mongoose database schema (complete with a local JSON file fallback).
 
+## 📸 Screenshots
+
+### 1. Hero Section & Interactive Robotics IDE Dashboard
+![Hero Section](assets/hero_section.png)
+
+### 2. Live Enrollment Registration Form
+![Registration Form](assets/registration_form.png)
+
+### 3. Success Registration Confirmation (with Canvas Confetti celebration)
+![Registration Success](assets/registration_success.png)
+
 ---
 
 ## 🏗️ Project Architecture & Structure
