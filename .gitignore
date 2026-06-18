@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Production builds
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Databases & local fallback database
+backend/enquiries.json
+
+# OS files
+.DS_Store
+Thumbs.db
